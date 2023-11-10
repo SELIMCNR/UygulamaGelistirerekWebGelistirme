@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <form action="register.php">
+      <div>
+        <label for="name">Adınız</label>
+        <input type="text" name="" id="name" />
+      </div>
+      <div>
+        <label for="surname">Soyadınız</label>
+        <input type="text" name="" id="surname" />
+      </div>
+      <div>
+        <label for="password">Şifreniz</label>
+        <input type="password" name="" id="password" />
+      </div>
+
+      <div>
+        <label for="intro"> Kendini Anlat</label>
+        <textarea name="intro" id="intro" cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <p>En sevdiğiniz programlama dili:</p>
+        <label for="html">HTML</label>
+        <input type="radio" name="programming" id="html" value="html" />
+        <label for="css">CSS</label>
+        <input type="radio" name="programming" id="css" value="css" />
+        <label for="js">JS</label>
+        <input type="radio" name="programming" id="js" value="js" />
+      </div>
+
+      <div>
+        <p>En sevdiğiniz programlama dili:</p>
+        <label for="html2">HTML</label>
+        <input type="checkbox" id="html2" value="html" />
+        <label for="css2">CSS</label>
+        <input type="checkbox" id="css2" value="css" />
+        <label for="js2">JS</label>
+        <input type="checkbox" id="js2" value="js" />
+      </div>
+      <div>
+        <label for="cities">Şehir</label>
+        <select id="cities">
+          <option value="istanbul">İstanbul</option>
+          <option value="ankara">Ankara</option>
+          <option value="izmir">İzmir</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </div>
+      <div>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="eposta" />
+      </div>
+
+      <button type="submit">Kaydet</button>
+      <button type="reset">Temizle</button>
+    </form>
+  </body>
+</html>
