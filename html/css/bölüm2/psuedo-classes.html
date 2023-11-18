@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0" />
+    <title>combinators</title>
+    <style>
+      a {
+        border: 1px solid gray;
+        padding: 5px 8px;
+        display: inline-block;
+        text-decoration: none;
+        width: 60px;
+        text-align: center;
+      }
+      /* link normal durumda ilk durum*/
+      a:link {
+        color: red;
+      }
+      /* linke gidildiyse*/
+      a:visited {
+        background-color: aqua;
+      }
+      /*linkin üzerine gelince*/
+      a:hover {
+        background-color: gainsboro;
+      }
+      /*link aktif olduğunda*/
+      a:active {
+        color: #8a5555;
+        background-color: white;
+      }
+      /* dive gelince paragraf göster*/
+      div:hover p {
+        background-color: mediumpurple;
+        display: block;
+      }
+
+      p {
+        display: none;
+      }
+
+      /*ilk paragrafa uygula*/
+      p::first-line {
+        font-weight: bold;
+        color: burlywood;
+        word-spacing: 3px;
+        letter-spacing: 2px;
+      }
+
+      /*about clasına sahip p etiketi*/
+      p.about::first-line {
+        color: green;
+      }
+      /* Her paragrafın ilk harfini değiştir*/
+      p::first-letter {
+        font-size: 48px;
+      }
+
+      /*seçilen yazıya renk uygula*/
+      ::selection {
+        background-color: aqua;
+      }
+
+      p::before {
+        content: "Önüne eklendi";
+        content: "\261D";
+      }
+      p::after {
+        content: "Sonuna eklendi";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Psuedo classes 
+    aksiyona göre tepki -->
+    <a href="box-model.html">Home</a>
+    <a href="navbar.html">About</a>
+    <a href="width-height.html">Products</a>
+
+    <div>
+      Click here!
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nisi
+        dolorum, architecto velit error quia necessitatibus autem suscipit.
+        Neque laudantium placeat voluptate autem mollitia possimus?
+      </p>
+    </div>
+    <!--Psuedo elements 
+    parçaya müdahele-->
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p class="about">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolor
+      laborum voluptate earum, iusto inventore?
+    </p>
+  </body>
+</html>

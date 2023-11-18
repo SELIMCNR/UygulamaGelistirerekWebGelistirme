@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="width-height" />
+    <meta name="keywords" content="html,css,php" />
+    <meta name="author" content="Widht " />
+    <title>width-height</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        width: 100px;
+        width: 50%;
+        width: 100%;
+        height: 50%;
+        height: 100%;
+        height: 100px;
+        background-color: red;
+      }
+
+      #first {
+        background-color: red;
+      }
+      #second {
+        background-color: green;
+
+        visibility: hidden; /*görünmez yer tutar*/
+      }
+      #third {
+        background-color: blue;
+        display: none; /*görünmez yr tutmaz*/
+      }
+      a {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        display: block;
+      }
+      .box {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+      <section id="how-it-works">
+        <h1>How it works?</h1>
+      </section>
+    </main>
+    <div class="box" id="first">First</div>
+    <div class="box" id="second">Second</div>
+    <div class="box" id="third">Third</div>
+
+    <div class="container">
+      <a href="">Home</a>
+      <a href="">Movies</a>
+      <a href="">Contact</a>
+    </div>
+  </body>
+</html>

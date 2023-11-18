@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0" />
+    <title>box model</title>
+    <style>
+      * {
+        margin: 0px;
+      }
+      #showcase {
+        background-color: #2e4c6d;
+        margin: 20px; /*Her taraftan 20px */
+        margin-top: 20px; /*üsten 20*/
+        margin-right: 20px; /*sağdan 20*/
+        margin-bottom: 20px; /*alttan 20*/
+        margin-left: 20px; /*soldan 20*/
+        margin: 50 30px 20px; /*üst 50, sağ-sol 30, alt 20*/
+
+        padding: 20px; /*Her taraftan 20px  iç boşluk*/
+      }
+      #how-it-works {
+        background-color: #fc997c;
+        margin: 20px; /*her taraftan 20*/
+        margin-top: 20px; /*üsten 20*/
+        margin-right: 20px; /*sağdan 20*/
+        margin-bottom: 20px; /*alttan 20*/
+        margin-left: 20px; /*soldan 20*/
+        margin: auto; /*ortalar*/
+        width: 500px;
+        padding-left: 50px;
+      }
+      h1 {
+        padding: 20px;
+        background-color: #296eb0;
+        border: 5px solid #dadbdd;
+        border-top: 5px solid wheat;
+        border-right: 5px solid wheat;
+        border-left: 5px solid wheat;
+        border-bottom: 5px solid wheat;
+      }
+      nav {
+        background-color: #2e4c6d;
+        padding: 20px;
+        margin-top: 10px;
+      }
+      a {
+        padding: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Contact</a>
+    </nav>
+    <!-- Box model: Margin(dış boşluk) Padding(iç boşluk) border(kutu kenarlık)-->
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+      <section id="how-it-works">
+        <h1>How it works?</h1>
+      </section>
+    </main>
+  </body>
+</html>

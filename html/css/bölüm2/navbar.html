@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0" />
+    <title>box model</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      #showcase {
+        background-color: #2e4c6d;
+        height: 500px;
+        width: 100%;
+        padding: 10px;
+      }
+      #how-it-works {
+        background-color: #fc997c;
+        padding: 10px;
+      }
+      .Main-header {
+        background-color: #fc997c;
+      }
+
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 99px);
+        text-align: right;
+      }
+      .main-nav__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .main-nav__item {
+        display: inline-block;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .main-header__logo {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 21px;
+      }
+
+      .main-nav__item a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .main-nav__item a:hover,
+      .main-nav__item:hover::before {
+        color: #2e4c6d;
+      }
+      .main-nav__item :active,
+      main-nav__item:active {
+        color: #fff;
+      }
+      .main-nav__item ::before {
+        content: "\2022";
+        color: #fff;
+      }
+      .main-nav__item--login {
+        color: #fff;
+
+        padding: 4px 16px;
+        border-radius: 8px;
+      }
+      .main-nav__item--login::before {
+        content: "\2022";
+        color: #fff;
+      }
+      .main-nav__item--login a {
+        background-color: #2e4c6d;
+        color: #fff;
+        padding: 4px 16px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+      }
+      .main-nav__item--login a:hover {
+        background-color: #2e4c6d;
+        color: #fff;
+        border: 2px solid #2e4c6d;
+      }
+      .main-nav__item--login::before {
+        content: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="Main-header">
+      <a href="" class="main-header__logo">MovieApp</a>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Filmler</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Diziler</a>
+          </li>
+          <li class="main-nav__item main-nav__item--login">
+            <a href="" class="main-nav__link">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+      <section id="how-it-works">
+        <h1>How it works?</h1>
+      </section>
+    </main>
+  </body>
+</html>

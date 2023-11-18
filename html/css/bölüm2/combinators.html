@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0" />
+    <title>combinators</title>
+    <style>
+      /*descendant*/
+      div p {
+        background-color: gainsboro;
+      }
+
+      /*child*/
+      div > p {
+        background-color: gainsboro;
+      }
+      /* adjacent sibling */
+      div + p {
+        background-color: gainsboro;
+      }
+      /* general sibling */
+      div ~ p {
+        background-color: gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Combinators-->
+    <!--1- Descendant Selector ( )-->
+    <p>1.paragraf</p>
+    <div>
+      <p>2.paragraf</p>
+      <p>3.paragraf</p>
+      <div>
+        <p>4.paragraf</p>
+      </div>
+    </div>
+    <p>5.paragraf</p>
+    <!--2- Child Selector (>)-->
+    <!--3- Adjacent Sibling Selector (+)-->
+    <!--4- General Sibling Selector (~)-->
+  </body>
+</html>
