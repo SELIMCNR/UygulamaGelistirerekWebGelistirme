@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" />
+    <title>Id and Class Selectors</title>
+    <style>
+      h1 {
+        color: rgb(0, 255, 0);
+      }
+      h1 {
+        color: rgb(60, 60, 126); /* en son etiket doğru olan*/
+        font-size: 16px;
+      }
+      #page-title {
+        border-bottom: 3px solid green;
+      }
+      .text-yellow {
+        color: yellow;
+      }
+      /*satır içi css > id selector>class selecto>tag selector>browser defaults*/
+    </style>
+  </head>
+  <body>
+    <!--Class id selectors-->
+    <main>
+      <section>
+        <h1 id="page-title" class="text-yellow">Welcome to MovieApp</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </section>
+      <section>
+        <h2 id="page-subtitle" class="">How it works</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </section>
+    </main>
+  </body>
+</html>
