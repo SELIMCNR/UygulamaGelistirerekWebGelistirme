@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        margin: 0px;
+      }
+      header,
+      footer {
+        background-color: #8267be;
+        color: #ffbd35;
+        padding: 15px;
+      }
+      .col {
+        float: left;
+        padding: 15px 15px 15px 0px;
+      }
+      .menu {
+        width: 25%;
+        float: left;
+        height: 300px;
+        background-color: aquamarine;
+      }
+      .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .menu li {
+        padding: 8px;
+        margin-bottom: 8px;
+        background-color: #502064;
+      }
+      .menu li:hover {
+        cursor: pointer;
+        background-color: #8267de;
+      }
+      .content {
+        background-color: blue;
+        float: left;
+        height: 300px;
+        width: 75%;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Header</h2>
+    </header>
+    <main class="clearfix">
+      <div class="menu col">
+        <ul>
+          <li>
+            <a href="#">Html</a>
+          </li>
+          <li>
+            <a href="#">Css</a>
+          </li>
+          <li>
+            <a href="#">Javascript</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content col">
+        <h1>Komple web-share</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
+          temporibus blanditiis, tenetur ea eum obcaecati mollitia ut maiores?
+          Repellat quidem, excepturi quisquam reiciendis earum odit debitis
+          harum inventore aperiam tenetur ad ex ut eum. Eligendi quisquam
+          commodi adipisci velit praesentium ipsum natus qui a molestias
+          deserunt, quibusdam cum excepturi sed.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ea
+          mollitia nostrum molestiae ab asperiores!
+        </p>
+      </div>
+    </main>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+  </body>
+</html>

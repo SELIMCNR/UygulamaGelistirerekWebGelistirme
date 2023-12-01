@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: chocolate;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: brown;
+        float: right;
+      }
+      #box1 {
+        float: left;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      p {
+        border: 1px solid rgb(0, 174, 255);
+        padding: 5px;
+      }
+      img {
+        width: 300px;
+        float: right;
+        margin-right: 10px;
+      }
+      /*floatları temizler*/
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container " class="clearfix">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div style="clear: both"></div>
+    </div>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+      consequuntur!
+    </p>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+      consequuntur!
+    </p>
+    <p>
+      <img src="../../images/a.png" alt="" />
+      <span>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quo
+        nulla vitae voluptas libero amet porro ratione nobis nemo? Consequuntur
+        possimus quas earum repellendus! Dignissimos magni illum voluptatem,
+        neque debitis odio modi, iure eaque nesciunt sed quisquam ipsa officia
+        veritatis. Veritatis, dolorum aspernatur excepturi ratione rerum quidem
+        deleniti unde in.
+      </span>
+    </p>
+  </body>
+</html>
