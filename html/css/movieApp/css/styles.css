@@ -1,3 +1,7 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("buttons.css");
+
 * {
   box-sizing: border-box;
 }
@@ -306,6 +310,9 @@ footer {
   background-color: #2e4c6d;
   padding: 30px;
   margin-top: 30px;
+
+  position: relative;
+  bottom: -200px;
 }
 footer a {
   color: #fff;
