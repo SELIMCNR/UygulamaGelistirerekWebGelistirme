@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="body">
+    <header class="main-header">
+      <div class="container responsive">
+        <a href="index.html" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="filmler.html">Filmler</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="diziler.html">Diziler</a>
+            </li>
+            <li class="main-nav__item main-nav__item--login">
+              <a class="btn btn-secondary" href="register.html">Login</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" onclick="displayMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="how-it-works">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title">How it works?</h2>
+            <p>
+              We will show you step by step how to start watching your favorite
+              movies & tv shows starting now!
+            </p>
+            <p>
+              Hakkımzda alanı Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Exercitationem harum excepturi deserunt at in.
+              Sit! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora pariatur consequuntur est voluptatibus eius cumque, qui
+              odio quo! Doloremque error, fuga ut magni doloribus et? Voluptas
+              ab blanditiis aspernatur. Officia corporis facilis quasi! Nihil
+              fugit quam, cumque, atque repellendus omnis dolores eius magnam
+              commodi iste recusandae quod architecto. Ipsum, id! Nam, impedit
+              qui totam aliquid non in molestiae? Similique ea officia
+              dignissimos eum? Velit dolore beatae rerum tempora iusto
+              consequatur labore repudiandae libero fugit ducimus, placeat esse
+              reprehenderit minus ipsa rem mollitia eum earum numquam? Lorem
+              ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam sit
+              iusto at ea blanditiis atque asperiores. Delectus necessitatibus
+              qui vero temporibus ipsum? Necessitatibus laboriosam nobis dolore
+              magni voluptatem deleniti velit fugit, atque eveniet ullam
+              laborum, ipsum eaque eum facilis accusamus. Culpa cumque quas
+              molestias architecto unde, dicta, sequi non laboriosam numquam
+              accusamus corporis rem itaque iste! Quaerat ipsa deserunt
+              voluptate accusantium, autem quod suscipit laudantium similique
+              repudiandae est, ex illum voluptatem rem consequatur quae dolores
+              maxime eaque nobis cum libero! At velit iusto quas eum repellendus
+              non aspernatur minus. Impedit, quos? Sed repellendus dolorum
+              ratione fugiat, adipisci veritatis inventore et. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Officiis, magni, sit
+              debitis iste magnam ut obcaecati nisi facere ea quo eum nemo ex in
+              nihil fugiat quae fuga vel error rem dolore ipsum, iusto sint ab
+              rerum. Nihil, magnam officia dolor labore suscipit voluptates
+              adipisci fugiat in iure magni quis blanditiis earum laborum harum
+              voluptatum nemo sunt temporibus, ipsam similique ratione ea non.
+              Pariatur eligendi architecto atque quisquam et, veniam modi totam
+              expedita laboriosam aspernatur perspiciatis distinctio! Ex qui
+              sequi quo, a facere dolorem beatae, dicta distinctio sed nam
+              laudantium obcaecati assumenda, voluptas architecto nostrum maxime
+              adipisci perferendis velit. Enim.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <ul id="footer-links">
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Forum</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul id="social-links">
+              <li>
+                <a href="https://www.facebook.com/" class="fab fa-facebook"></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/home" class="fab fa-twitter"></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  class="fab fa-instagram"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#body" id="backtotop">
+      <i class="fas fa-chevron-circle-up"></i>
+    </a>
+    <!--Açılır menü için gerekli js-->
+    <script>
+      function displayMenu() {
+        var link = document.getElementById("main-nav__items");
+        link.classList.toggle(
+          "responsive"
+        ); /*Tıklanınca responsive classı ekle*/
+      }
+    </script>
+  </body>
+</html>
