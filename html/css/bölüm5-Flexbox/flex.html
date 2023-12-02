@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: flex;
+        /* flex-container*/
+        flex-direction: row; /*satırda hizala */
+        flex-direction: column; /*sütunda hizala */
+        flex-direction: row-reverse; /*satırda ters hizala */
+        flex-direction: column-reverse; /*sütunda ters hizala */
+        flex-wrap: wrap; /*sütunlarda konuma göre hizala */
+        flex-wrap: nowrap; /*sütunlarda konuma göre hizalama yapma */
+        flex-flow: row wrap; /*satırda hizala ve sütunlarda konuma göre hizala */
+        /* flex-aligments*/
+        /*justify-content:yatayda*/
+        justify-content: center; /* satırda ortala */
+        justify-content: flex-start; /* satırda başa hizala */
+        justify-content: flex-end; /* satırda sona hizala */
+        justify-content: space-between; /* satırda aralarında eşit boşluk bırakarak hizala başta bırakma boşluk */
+        justify-content: space-around; /* satırda aralarında eşit boşluk bırakarak hizala başta 2x boşluk bırak */
+        justify-content: space-evenly; /* satırda aralarında eşit boşluk bırakarak hizala başta ve sonda boşluk bırak */
+        /*align-items:dikeyde*/
+        align-items: center; /* sütunda ortala */
+        align-items: flex-start; /* sütunda başa hizala */
+        align-items: flex-end; /* sütunda sona hizala */
+        align-items: stretch; /* sütunda uzat */
+        align-items: baseline; /* sütunda yazıların altına hizala */
+        /*flex item alignments*/
+        align-items: start; /* sütunda başa hizala */
+        align-items: end; /* sütunda sona hizala */
+        align-items: center; /* sütunda ortala */
+        align-items: stretch; /* sütunda uzat */
+        /*satırda*/
+        align-content: start; /* satırda başa hizala */
+        align-content: end; /* satırda sona hizala */
+        align-content: center; /* satırda ortala */
+        align-content: stretch; /* satırda uzat */
+        gap: 10px; /* aralara boşluk bırak 10px margin gibi*/
+        row-gap: 10px; /* satır aralarına boşluk bırak 10px margin gibi*/
+        column-gap: 10px; /* sütun aralarına boşluk bırak 10px margin gibi*/
+
+        background-color: #034f84;
+        padding: 15px;
+      }
+      .item {
+        background-color: #f7cac9;
+        padding: 15px;
+        margin: auto; /*ortalar*/
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 1.5rem;
+        text-align: center;
+        /*item properties*/
+        flex-grow: 1; /*İçerik kadar eşit kapla*/
+        flex-grow: 2; /*İçerik kadar 2x kapla*/
+        /*flex:grow shrink bassis= flex:0 1 200px*/
+      }
+      .item-1 {
+        /*tek eleman işlemleri*/
+        align-self: flex-start; /* sütunda başa hizala */
+        flex: 25%;
+        order: 1; /*Kutu yeri sıralama 1.*/
+      }
+      .item-2 {
+        align-self: center; /* sütunda ortala */
+        flex: 25%;
+        order: 2; /*sıralama 2.*/
+      }
+      .item-3 {
+        flex-basis: 200px; /*sütun genişliği belli genişliğe göre sabit sonra azalır*/
+        flex-shrink: 0; /*her zaman 200pxelde kal denir*/
+        flex: 50%;
+        order: -3; /*sıralama -3.*/
+      }
+    </style>
+  </head>
+  <body>
+    <!--Flex-container-->
+    <div class="container">
+      <div class="item item-1">item1</div>
+      <div class="item item-2">item2</div>
+      <div class="item item-3">item3</div>
+      <div class="item item-4">item4</div>
+      <div class="item item-5">item5</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      h1 {
+        display: none;
+      }
+      /*Phone*/
+      @media (max-width: 575px) {
+        #phone h1 {
+          display: block;
+        }
+        body {
+          background-color: rgb(50, 40, 5);
+        }
+      }
+
+      /* Landscape*/
+      @media (min-width: 576px) and (max-width: 767px) {
+        #landscape h1 {
+          display: block;
+        }
+        body {
+          background-color: red;
+        }
+      }
+      /*tablets*/
+      @media (min-width: 768px) and (max-width: 991px) {
+        #tables h1 {
+          display: block;
+        }
+        body {
+          background-color: green;
+        }
+      }
+
+      /*Desktop*/
+      @media (min-width: 992px) and (max-width: 1199px) {
+        #desktop h1 {
+          display: block;
+        }
+        body {
+          background-color: blue;
+        }
+      }
+
+      /*Large Desktop*/
+      @media (min-width: 1200px) and (max-width: 1399px) {
+        #large h1 {
+          display: block;
+        }
+        body {
+          background-color: yellow;
+        }
+      }
+      /*xlarge desktop*/
+      @media (min-width: 1400px) {
+        #xlarge h1 {
+          display: block;
+        }
+        body {
+          background-color: purple;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phone">
+      <h1>Phone</h1>
+    </div>
+    <div id="landscape">
+      <h1>Landscape</h1>
+    </div>
+    <div id="tables">
+      <h1>Tablet</h1>
+    </div>
+    <div id="desktop">
+      <h1>desktop</h1>
+    </div>
+    <div id="large">
+      <h1>large</h1>
+    </div>
+    <div id="xlarge">
+      <h1>xlarge</h1>
+    </div>
+  </body>
+</html>
