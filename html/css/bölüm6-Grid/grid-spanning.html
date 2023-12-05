@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid; /*satırı kaplar komple*/
+        grid-template-columns: repeat(
+          3,
+          auto
+        ); /*(3,1fr) = (3,auto) aynı demek*/
+        gap: 10px; /*boşluk verir satır ve sütundan */
+        row-gap: 10px; /*satır boşluk verir*/
+        column-gap: 10px; /*sütun boşluk verir*/
+        background-color: #034f84;
+        padding: 20px;
+      }
+      .item {
+        background-color: #f7786b;
+        padding: 20px;
+        margin: 20px;
+        color: #fff;
+        font-size: 25px;
+      }
+      .item:first-child {
+        grid-column-start: 2; /*sütun başlangıçı */
+        grid-column-end: 5; /*sütun bitişi */
+        grid-column: 2/5; /*sütun başlangıç ve bitişi */
+        grid-column: 2 / span4;
+
+        grid-row-start: 1; /*satır başlangıçı */
+        grid-row-end: 3; /*satır bitişi */
+        grid-row: 1/3; /*satır başlangıç ve bitişi */
+        grid-row: 1 / span3;
+
+        grid-area: 1/2 / span 2 / span 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+    </div>
+  </body>
+</html>

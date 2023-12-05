@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: grid; /*satırı kaplar komple*/
+        grid-template-columns: 150px 250px 400px; /*3 kolon ve kolon ölçüleri*/
+        grid-template-columns: 150px auto 200px auto; /*auto ile boşlukları doldurur*/
+        grid-template-columns: auto auto 20%; /*auto ile boşlukları doldurur*/
+        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 200px);
+        grid-template-columns: 150px 200px 1fr 2fr; /*fr ile kalan alanı doldurur*/
+        grid-template-rows: 150px 200px 1fr; /*3 satır ve satır ölçüleri */
+
+        grid-auto-rows: 3fr;
+        background-color: #034f84;
+        padding: 20px;
+      }
+      .item {
+        background-color: #f7786b;
+        padding: 20px;
+        margin: 20px;
+        color: #fff;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+    </div>
+  </body>
+</html>
