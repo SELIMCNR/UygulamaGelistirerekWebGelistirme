@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        gap: 10px;
+      }
+      .item {
+        background-color: #f7786b;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

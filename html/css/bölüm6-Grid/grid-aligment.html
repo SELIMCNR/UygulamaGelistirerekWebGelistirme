@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        height: 600px;
+        background-color: #034f84;
+
+        justify-items: stretch;
+        justify-items: center;
+        justify-items: start;
+        justify-items: end;
+
+        align-items: stretch;
+        align-items: center;
+        align-items: start;
+        align-items: end;
+
+        justify-content: end;
+        justify-content: start;
+        justify-content: center;
+
+        align-self: start;
+        align-self: end;
+        align-self: center;
+      
+    }
+      .item {
+        background-color: #f7786b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">box</div>
+      <div class="item">box2</div>
+      <div class="item">box3</div>
+      <div class="item">box4</div>
+      <div class="item">box5</div>
+    </div>
+  </body>
+</html>
