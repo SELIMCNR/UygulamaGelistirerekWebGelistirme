@@ -8,24 +8,29 @@
       #container {
         background-color: chocolate;
       }
+
       .box {
         width: 150px;
         height: 150px;
         background-color: brown;
         float: right;
       }
+
       #box1 {
         float: left;
       }
+
       .clearfix::after {
         content: "";
         display: block;
         clear: both;
       }
+
       p {
         border: 1px solid rgb(0, 174, 255);
         padding: 5px;
       }
+
       img {
         width: 300px;
         float: right;
@@ -65,6 +70,20 @@
         veritatis. Veritatis, dolorum aspernatur excepturi ratione rerum quidem
         deleniti unde in.
       </span>
+    </p>
+    <div class="clearfix" id="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div style="clear: both"></div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eveniet
+      recusandae pariatur voluptatibus sapiente molestiae.
+    </p>
+    <p>
+      <img src="../bölüm4/movieApp/img/features.jpeg" alt="" />
     </p>
   </body>
 </html>
