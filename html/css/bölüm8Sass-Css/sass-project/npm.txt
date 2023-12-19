@@ -1,0 +1,9 @@
+npm init --yes     :npmi kur
+npm i node-sass    :sass kur
+
+package json içerisinde  sass adlı klasöore git sassı kur ve oradaki kodları css altındaki css dosyasına yaz.
+ "scripts": {
+    "sass": "node-sass -w sass -o css"
+  }
+
+npm run sass       :sassı başlat
