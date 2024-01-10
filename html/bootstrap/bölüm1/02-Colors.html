@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding: 100px;
+      }
+
+      .box {
+        padding: 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  
+        primary  -- mavi
+        secondary -- gri
+        success  -- yeşil
+        danger   -- kırmızı
+        warning  -- sarı
+        info     -- açıkmavi
+        light    -- beyaz   
+        dark     -- koyu siyah
+        muted    -- soluk gri
+        black    -- siyah
+    -->
+    <!-- text-primary :yazı rengi mavi -->
+    <p class="text-primary">Lorem , ipsum tl.</p>
+    <p class="text-secondary">Lorem , ipsum tl.</p>
+    <p class="text-danger">Lorem , ipsum tl.</p>
+    <p class="text-success">Lorem , ipsum tl.</p>
+    <p class="text-warning">Lorem , ipsum tl.</p>
+    <p class="text-info">Lorem , ipsum tl.</p>
+
+    <!-- bg-success : arka plan rengi yeşil. 
+    box : kutu  , bg-gradient : arka plan geçişli bir renk-->
+    <div class="bg-success text-white box bg-gradient">Lorem , ipsum tl.</div>
+    <div class="bg-dark text-white box bg-gradient">Lorem , ipsum tl.</div>
+    <!-- bg-opacity-75 : arka plan opasitesi yüzde 75 -->
+    <div class="bg-primary text-white bg-opacity-75 box">Lorem , ipsum tl.</div>
+    <div class="bg-danger text-white bg-opacity-50 box">Lorem , ipsum tl.</div>
+    <div class="bg-info text-white bg-opacity-25 box">Lorem , ipsum tl.</div>
+    <div class="bg-warning text-white bg-opacity-15 box">Lorem , ipsum tl.</div>
+
+    <!--text-opacity-75 : yazı arka plan opasitesi yüzde 75 -->
+    <p class="text-primary text-opacity-75">Lorem , ipsum tl.</p>
+    <p class="text-primary text-opacity-50">Lorem , ipsum tl.</p>
+    <p class="text-primary text-opacity-25">Lorem , ipsum tl.</p>
+    <!-- badge : Küçük sayım ve etiketleme bileşenimiz -->
+    <br /><br />
+    <span class="badge bg-primary"> Lorem , ipsum tl.</span>
+    <span class="badge bg-success"> Lorem , ipsum tl.</span>
+    <span class="badge bg-info"> Lorem , ipsum tl.</span>
+    <span class="badge bg-warning"> Lorem , ipsum tl.</span>
+
+    <!-- badge rounded-pill : yuvarlak köşeli -->
+    <br />
+    <br />
+    <span class="badge rounded-pill bg-danger"> Lorem , ipsum tl. </span>
+    <span class="badge rounded-pill bg-success"> Lorem , ipsum tl. </span>
+    <span class="badge rounded-pill bg-light"> Lorem , ipsum tl. </span>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
