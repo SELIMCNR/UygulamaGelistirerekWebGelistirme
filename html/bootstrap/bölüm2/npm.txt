@@ -1,0 +1,28 @@
+npm run dist	npm run dist creates the /dist/ directory with compiled files. Uses Sass, Autoprefixer, and UglifyJS.
+npm test	Same as npm run dist plus it runs tests locally
+npm run docs	Builds and lints CSS and JavaScript for docs. You can then run the documentation locally via npm run docs-serve.
+Run npm run to see all the npm scripts.
+
+npm init --yes
+npm i node-sass
+package.json
+{
+  "name": "Şablonboostrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss/ -o css/ --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "node-sass": "^9.0.0"
+  }
+}
+scss adlı klasör oluştur ve css adlı klasör oluştur
+npm i bootstrap
+npm run scss
