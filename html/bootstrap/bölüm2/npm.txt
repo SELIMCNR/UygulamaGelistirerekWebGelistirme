@@ -26,3 +26,4 @@ package.json
 scss adlı klasör oluştur ve css adlı klasör oluştur
 npm i bootstrap
 npm run scss
+npm install fslightbox
