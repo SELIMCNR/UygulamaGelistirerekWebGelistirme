@@ -86,3 +86,14 @@
 .checked {
   color: orange;
 }
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Footer rengi */
+  color: #333; /* Yazı rengi */
+  padding: 20px 0; /* İçerikten yukarı ve aşağı boşluk */
+  text-align: center; /* Metni ortala */
+}

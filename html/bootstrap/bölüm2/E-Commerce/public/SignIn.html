@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <!--Üst menü-->
+      <section class="top-bar">
+        <div class="container">
+          <div class="row gy-3 align-items-center">
+            <div class="col-lg-2 col-sm-4 col-8">
+              <a href="index.html" class="navbar-brand">E-Commerce</a>
+            </div>
+
+            <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+              <div class="text-end">
+                <a href="SignIn.html" class="btn btn-light">
+                  <i class="fa fa-user"></i
+                  ><span class="ms-1 d-none d-sm-inline-block"> Sign In </span>
+                </a>
+                <a href="Register.html" class="btn btn-light">
+                  <i class="fa fa-user"></i
+                  ><span class="ms-1 d-none d-sm-inline-block"> Register </span>
+                </a>
+                <a href="list.html" class="btn btn-light">
+                  <i class="fa fa-heart"></i
+                  ><span class="ms-1 d-none d-sm-inline-block"> Listem </span>
+                </a>
+                <a href="" class="btn btn-light">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span class="ms-1 d-none d-sm-inline-block"> Sepetim </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-12">
+              <form action="">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Anahtar Kelime Giriniz..."
+                  />
+                  <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <div class="container mt-5">
+      <div class="input-group mx-auto w-50">
+        <form action="index.aspx" class="py-5">
+          <div class="mb-3">
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Email</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control-plaintext"
+                  id="staticEmail"
+                  placeholder="email@example.com"
+                />
+              </div>
+            </div>
+            <label for="inputPassword5" class="form-label">Password</label>
+            <input
+              type="password"
+              id="inputPassword5"
+              class="form-control"
+              aria-describedby="passwordHelpBlock"
+            />
+            <div id="passwordHelpBlock" class="form-text">
+              Your password must be 8-20 characters long, contain letters and
+              numbers, and must not contain spaces, special characters, or
+              emoji.
+            </div>
+            <input type="submit" class="btn btn-primary" value="Sign In" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="py-4 bg-primary footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <form>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email" />
+                <button class="btn btn-outline-warning">Abone Ol</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-8">
+            <nav class="text-center text-md-end">
+              <a href="#" class="btn btn-icon btn-outline-warning">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="btn btn-icon btn-outline-warning">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-icon btn-outline-warning">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="btn btn-icon btn-outline-warning">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </nav>
+          </div>
+          <div class="col-md-12">
+            <p class="text-center text-white">
+              © 2025 E-Commerce Tüm Hakları Saklıdır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
