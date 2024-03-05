@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="01_Dom.js"></script>
+  </head>
+  <body>
+    <p>
+      // Dom : JavaScript ile HTML ve CSS'i kontrol etme ve değiştirme
+      işlemlerini yapmamızı sağlayan bir yapıdır. // Dom : Document Object Model
+    </p>
+
+    <div class="card-header">
+      <h1 id="card-title title">Todo App 2</h1>
+    </div>
+    <ul id="task-list">
+      <li>Görev 1</li>
+      <li>Görev 2</li>
+      <li>Görev 3</li>
+      <li>Görev 4</li>
+    </ul>
+    <script>
+      let sonuc;
+      sonuc = document.getElementById("title"); // id'si title olanı almak için
+      sonuc = document.getElementById("title").id; // id'sini almak için
+      sonuc = document.getElementById("title").className; // class'ı almak için
+      sonuc = document.getElementById("title").classList; // class'ı almak için (array olarak)
+
+      document.getElementById("title").style.fontSize = "25px"; // font büyüklüğü değiştirme
+      document.getElementById("title").style.color = "red"; // yazı rengi değiştirme
+      document.getElementById("title").style.fontFamily = "Arial"; // font değiştirme
+      document.getElementById("title").style.fontWeight = "bold"; // font kalınlığı değiştirme
+      //      document.getElementById("title").style.display = "none"; // görünürlüğü kaldırma
+      document.getElementById("title").style.background = "#333"; // arka plan rengi değiştirme
+
+      document.getElementById("title").innerText = "Yeni Todolar"; // içeriği değiştirme
+      document.getElementById("title").innerHTML =
+        "<span style='color:yellow'>Yeni Todolar</span>"; // içeriği değiştirme
+
+      console.log(sonuc);
+
+      sonuc = document.querySelector("#title"); // id'si title olanı almak için
+      sonuc = document.querySelector(".card-header"); // class'ı card-header olanı almak için
+      sonuc = document.querySelector("div"); // ilk div'i almak için
+
+      sonuc = document.querySelector("li"); // ilk li'yi almak için
+      sonuc = document.querySelector("li:last-child"); // son li'yi almak için
+      sonuc = document.querySelector("li:nth-child(2)"); // 2. li'yi almak için
+      sonuc = document.querySelector("li:nth-child(odd)"); // tek sıradaki li'yi almak için
+      sonuc = document.querySelector("li:nth-child(even)"); // çift sıradaki li'yi almak için
+    </script>
+  </body>
+</html>

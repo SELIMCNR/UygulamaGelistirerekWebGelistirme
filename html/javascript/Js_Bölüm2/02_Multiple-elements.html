@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      // Dom : JavaScript ile HTML ve CSS'i kontrol etme ve değiştirme
+      işlemlerini yapmamızı sağlayan bir yapıdır. // Dom : Document Object Model
+    </p>
+
+    <div class="card-header">
+      <h1 id="card-title title">Todo App 2</h1>
+    </div>
+    <ul id="task-list">
+      <li class="task">Görev 1</li>
+      <li class="task">Görev 2</li>
+      <li class="task">Görev 3</li>
+      <li class="task">Görev 4</li>
+    </ul>
+    <script>
+      taskList = document.getElementsByClassName("task"); // class'ı task olanları almak için
+      sonuc = document.getElementsByClassName("task")[0]; // class'ı task olanları almak için 0. elemanı almak için
+      sonuc = document.getElementsByClassName("task")[1]; // class'ı task olanları almak için 0. elemanı almak için
+
+      for (let i = 0; i < taskList.length; i++) {
+        taskList[i].style.color = "red"; // class'ı task olanların rengini değiştirme
+        taskList[i].style.fontSize = "25px"; // class'ı task olanların font büyüklüğünü değiştirme
+        taskList[i].style.fontWeight = "bold"; // class'ı task olanların font kalınlığını değiştirme
+        console.log(taskList[i]);
+      }
+
+      for (let task of taskList) {
+        // of : array'in içindeki elemanları tek tek dönmek için
+        console.log(task);
+      }
+      for (let task in taskList) {
+        // in : array'in içindeki elemanların index'lerini dönmek için
+        console.log(task);
+      }
+      for (let task of taskList) {
+        task.style.color = "blue";
+        task.style.fontSize = "20px";
+        task.style.fontWeight = "normal";
+        task.innerText = "Item";
+      }
+      taskList = document.getElementsByTagName("li"); // etiketi li olanları almak için
+      ul = document.getElementById("task-list"); // id'si task-list olanı almak için
+      taskList = ul.getElementsByTagName("li"); // id'si task-list olanın içindeki etiketi li olanları almak için
+
+      taskList = document.querySelectorAll("li"); // etiketi li olanları almak için
+      taskList = document.querySelectorAll("#task-list li"); // etiketi li olanları almak için (id'si task-list olanın içindeki)
+    </script>
+  </body>
+</html>
