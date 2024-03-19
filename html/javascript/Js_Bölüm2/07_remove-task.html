@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .dropdown-toggle::after {
+        display: none;
+      }
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">Todo App</div>
+
+            <div class="card-body">
+              <form>
+                <div class="input-group">
+                  <input type="text" id="txtTaskName" class="form-control" />
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnAddNewTask"
+                  >
+                    Ekle
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card mt-3">
+            <div class="card-header">
+              <button id="clear" class="btn btn-danger btn-sm float-end">
+                Temizle
+              </button>
+            </div>
+            <ul id="task-list" class="list-group list-group-flush"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let sonuc;
+
+      let ul = document.getElementById("task-list"); //id ile seçme
+
+      //dinamik liste elemanı oluşturma json formatında
+      let gorevListei = [
+        {
+          id: 1,
+          gorevAdi: "Görev 1",
+        },
+        {
+          id: 2,
+          gorevAdi: "Görev 2",
+        },
+        {
+          id: 3,
+          gorevAdi: "Görev 3",
+        },
+        {
+          id: 4,
+          gorevAdi: "Görev 4",
+        },
+      ];
+
+      let editId;
+      let isEditTask = false;
+      taskInput = document.getElementById("txtTaskName");
+      displayTasks(); // sayfa yüklendiğinde görevleri listele
+
+      function displayTasks() {
+        let ul = document.getElementById("task-list");
+        ul.innerHTML = ""; // önceki görevleri temizle
+        for (let gorev of gorevListei) {
+          let li = `
+            <li class="task list-group-item">
+                      <div class="form-check">
+                        <input type="checkbox" id="${gorev.id}" class="form-check-input" />
+                        <label for="${gorev.id}" class="form-check-label">Görev ${gorev.gorevAdi}</label>
+                      </div>
+
+                      <div class="dropdown" >
+                        <button class="btn btn-link  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-ellipsis"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#" onclick="removeTask(${gorev.id})"><i class="fa-solid fa-trash-can"> </i> Sil</a></li>
+                          <li><a class="dropdown-item" href="#" onclick='updateTask(${gorev.id},"${gorev.gorevAdi}")'><i class="fa-solid fa-pen"></i> Düzenle</a></li>
+                        </ul>
+                    </li>
+
+            `;
+          ul.insertAdjacentHTML("beforeend", li); // beforeend ile sona eklenir
+          //  ul.insertAdjacentHTML("afterbegin", li);// afterbegin ile başa eklenir
+        }
+      }
+
+      document
+        .querySelector("#btnAddNewTask")
+        .addEventListener("click", newTask);
+
+      document
+        .querySelector("#btnAddNewTask")
+        .addEventListener("keypress", function () {
+          if (event.key === "Enter") {
+            document.getElementById("btnAddNewTask").click(); //entera basınca butona tıklanmış gibi olur
+          }
+        });
+      function newTask(event) {
+        taskInput = document.getElementById("txtTaskName");
+
+        if (taskInput.value == "") {
+          alert("Lütfen bir görev adı giriniz");
+        } else {
+          if (!isEditTask) {
+            gorevListei.push({
+              id: gorevListei.length + 1,
+              gorevAdi: taskInput.value,
+            }); // yeni görevi listeye ekle
+          } else {
+            //güncelleme
+            for (let gorev of gorevListesi) {
+              if (gorev.id == editId) {
+                gorev.gorevAdi = taskInput.value; // id si güncellenecek görevin adını güncelle
+              }
+              isEditTask = false;
+            }
+          }
+
+          gorevListei.push({
+            id: gorevListei.length + 1,
+            gorevAdi: taskInput.value,
+          }); // yeni görevi listeye ekle
+          displayTasks(); // yeni görevi listeye ekle
+        }
+
+        event.preventDefault(); //sayfa yenilenmesin diye
+      }
+
+      function removeTask(id) {
+        let deletedId;
+        /*  //id alma ilk yöntem
+              for (let index in gorevListei) {
+                if (gorevListei[index].id == id) {
+                  deletedId = index;
+                }
+              }*/
+
+        /* //id alma ikinci yöntem
+              gorevListei.findIndex(function (gorev) {
+                return gorev.id == id;
+              });
+      */
+        deletedId = gorevListei.findIndex((gorev) => gorev.id == id); // id si silinecek görevin indexini bulma
+
+        gorevListei.splice(deletedId, 1); // id si silinecek görevin indexini bulup silme işlemi
+
+        displayTasks(); // yeni görevi listeye ekle
+      }
+
+      function updateTask(taskId, taskName) {
+        //güncelleme butonuna basıldığında görev adını inputa yazdırma
+        editId = taskId;
+        isEditTask = true;
+        taskInput.value = taskName;
+        taskInput.focus();
+        taskInput.classList.add("active");
+
+        console.log("Edit id:", editId);
+        console.log("Edit node", isEditTask);
+      }
+    </script>
+  </body>
+</html>
