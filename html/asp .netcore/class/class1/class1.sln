@@ -9,9 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "staticMember", "staticMembe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "staticmemberApp", "staticmemberApp\staticmemberApp.csproj", "{DC878536-8ECA-40A3-BCE6-2B29F5A55E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern", "RepositoryPattern\RepositoryPattern.csproj", "{1565208A-AB34-47EE-B16B-2BF8F314157F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern", "RepositoryPattern\RepositoryPattern.csproj", "{1565208A-AB34-47EE-B16B-2BF8F314157F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{6788BA13-97FA-4620-A651-C6CCDEFA761D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{6788BA13-97FA-4620-A651-C6CCDEFA761D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{5BF26DE8-22A1-4DE2-A1DA-5914B16E3D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandlingApp", "ExceptionHandlingApp\ExceptionHandlingApp.csproj", "{F4F410A3-3181-4D05-B52A-712F67F26FC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandlingClass", "ExceptionHandlingClass\ExceptionHandlingClass.csproj", "{7A0159E0-92B3-45BC-8AE5-3C542ED289CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{6788BA13-97FA-4620-A651-C6CCDEFA761D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6788BA13-97FA-4620-A651-C6CCDEFA761D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6788BA13-97FA-4620-A651-C6CCDEFA761D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF26DE8-22A1-4DE2-A1DA-5914B16E3D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF26DE8-22A1-4DE2-A1DA-5914B16E3D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF26DE8-22A1-4DE2-A1DA-5914B16E3D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF26DE8-22A1-4DE2-A1DA-5914B16E3D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F410A3-3181-4D05-B52A-712F67F26FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F410A3-3181-4D05-B52A-712F67F26FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F410A3-3181-4D05-B52A-712F67F26FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F410A3-3181-4D05-B52A-712F67F26FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0159E0-92B3-45BC-8AE5-3C542ED289CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0159E0-92B3-45BC-8AE5-3C542ED289CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0159E0-92B3-45BC-8AE5-3C542ED289CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0159E0-92B3-45BC-8AE5-3C542ED289CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
