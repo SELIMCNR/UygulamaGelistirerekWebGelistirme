@@ -10,5 +10,55 @@
     <p>a</p>
     <!--Script dosyaları yukarı heade yada buraya yazılabilir-->
     <script src="07_number.js"></script>
+    <script>
+      //Sınıf tanımlama
+      class Uye {
+        constructor(uyeNo) {
+          this.uyeNo = uyeNo;
+        }
+      }
+      // Nesne oluşturma
+      var uye1 = new Uye(1);
+      var uye2 = new Uye(2);
+
+      // Nesne özelliklerine erişim
+      document.write("Üye1 no:" + uye1.uyeNo + "<br>");
+
+      class Daire {
+        constructor(yaricap) {
+          this.yaricap = yaricap;
+        }
+        //Metod tanımlama
+        alanHesapla() {
+          return Math.PI * this.yaricap * this.yaricap;
+        }
+        cevreHesapla() {
+          return 2 * Math.PI * this.yaricap;
+        }
+      }
+
+      var r1 = Number(prompt("Yarıçapı giriniz:"));
+      var daire1 = new Daire(r1);
+      document.write("Dairenin alanı:" + daire1.alanHesapla() + "<br>");
+      document.write("Dairenin çevresi:" + daire1.cevreHesapla() + "<br>");
+
+      class Ucgen {
+        static genislik = 0;
+        static yukseklik = 0;
+        alanHesapla() {
+          return (Ucgen.genislik * Ucgen.yukseklik) / 2;
+        }
+      }
+
+      var u1 = new Ucgen();
+      u1.genislik = 10;
+      u1.yukseklik = 5;
+      document.write("Üçgenin alanı:" + u1.alanHesapla() + "<br>");
+
+      var u2 = new Ucgen();
+      u2.genislik = Number(prompt("Genişlik giriniz:"));
+      u2.yukseklik = Number(prompt("Yükseklik giriniz:"));
+      document.write("Üçgenin alanı:" + u2.alanHesapla() + "<br>");
+    </script>
   </body>
 </html>
