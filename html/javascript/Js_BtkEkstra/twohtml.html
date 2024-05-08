@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- javascript ile yeni bağlantı açma-->
+
+    <script>
+      function pencereAc() {
+        open(
+          "https://www.btkakademi.gov.tr",
+          "_blank",
+          "width=500,height=500 "
+        );
+      }
+      function zaman() {
+        alert("5 saniye oldu");
+      }
+      setTimeout(zaman, 5000); //clearTimeout ile durdurulabilir
+    </script>
+    <input
+      type="button"
+      value="Yeni Pencere Aç"
+      onclick="pencereAc()"
+      onmouseover="zaman"
+    />
+    <br />
+    <script>
+      var i = 0;
+      function say() {
+        document.getElementById("kutu").innerHTML = "<b>" + i + "</b>";
+        i++;
+      }
+      setInterval(say, 1000);
+    </script>
+    <div id="kutu"></div>
+
+    <script>
+      document.write("appName:" + navigator.appName + "<br>");
+      document.write("appVersion:" + navigator.appVersion + "<br>");
+      document.write("platform:" + navigator.platform + "<br>");
+      document.write("codeName:" + navigator.appCodeName + "<br>");
+      document.write("cookieEnabled:" + navigator.cookieEnabled + "<br>");
+      document.write("Java?:" + navigator.javaEnabled() + "<br>");
+    </script>
+
+    <script>
+      document.write("screen.width:" + screen.width + "<br>");
+      document.write("screen.height:" + screen.height + "<br>");
+      document.write("renk derinliği:" + screen.colorDepth + "<br>");
+      document.write("pixel derinliği:" + screen.pixelDepth + "<br>");
+    </script>
+
+    <script>
+      document.write("location.href:" + location.href + "<br>");
+      document.write("location.hostname:" + location.hostname + "<br>");
+      document.write("location.pathname:" + location.pathname + "<br>");
+      document.write("location.protocol:" + location.protocol + "<br>");
+      document.write("location.port:" + location.port + "<br>"); //80
+    </script>
+    <script>
+      function ileri() {
+        history.forward();
+      }
+      function geri() {
+        history.back();
+      }
+    </script>
+  </body>
+</html>

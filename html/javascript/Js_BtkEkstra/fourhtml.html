@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Hata Yönetimi javascript-->
+    <p id="hata"></p>
+    <script>
+      try {
+        // Kodlar
+        aalert("Merhaba");
+      } catch (error) {
+        document.getElementById("hata").innerHTML = error;
+      }
+    </script>
+
+    <h1>Form ile Throw Uygulaması</h1>
+    <form>
+      Ders Notu: <input type="text" id="dersnotu" /> <br />
+
+      <input type="button" value="Kontrol et" onclick="kontrol()" />
+    </form>
+    <p id="hata iletisi"></p>
+    <p id="girilendeger"></p>
+    <script>
+      function kontrol() {
+        var not = document.getElementById("dersnotu").value;
+        var hatailetisi = document.getElementById("hata iletisi");
+
+        try {
+          if (not == "") throw "Not alanı boş bırakılamaz";
+          if (isNaN(not)) throw "Not alanına sayısal değer giriniz";
+          not = Number(not);
+          if (not < 0 || not > 100) throw "Not 0-100 arasında olmalıdır";
+          alert("Notunuz: " + not);
+        } catch (error) {
+          hatailetisi.innerHTML = "hata : " + error;
+        } finally {
+          document.getElementById("girilendeger").innerHTML =
+            "girilen deger : " + not;
+        }
+      }
+    </script>
+  </body>
+</html>
