@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="manset">İlk Manşet</h1>
+    <p id="ilk">İlk Paragraf</p>
+    <p id="ikinci">İkinci Paragraf</p>
+    <img
+      src="img.png"
+      id="bayrak"
+      onmouseover="karabayrak()"
+      onmouseout="albayrak()"
+    />
+    <script>
+      document.getElementById("manset").innerHTML = "Merhaba Dünya";
+      document.getElementById("ilk").innerHTML = "<b>İlk Paragraf</b>";
+      document.getElementById("ikinci").innerHTML = "<em> İkinci Paragraf</em>";
+
+      var bayragimiz = document.getElementById("bayrak");
+
+      function albayrak() {
+        bayragimiz.src =
+          "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+      }
+      function karabayrak() {
+        bayragimiz.src =
+          "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+      }
+    </script>
+
+    <!-- Document dizileri -->
+    <h2>Linkler</h2>
+    <a href="index.html">Anasayfa</a>
+    <a href="bizkimiz.html">Biz Kimiz?</a>
+    <a href="iletişim.html">İletişim</a>
+    <h2>Resimler</h2>
+    <img src="img.png" alt="Resim 1" />
+    <img src="img.png" alt="Resim 2" />
+    <form name="test">
+      Ad: <input type="text" name="ad" /> Soyad:
+      <input type="text" name="soyad" />
+      <input
+        type="button"
+        value="Gönder"
+        onclick="alert('Merhaba ' + test.ad.value)"
+      />
+    </form>
+    <script>
+      document.write(
+        "sayfadaki link sayısı : " + document.links.length + "<br>"
+      );
+      document.write("Resim sayısıf : " + document.images.length + "<br>");
+      document.write("Form sayısı : " + document.forms.length + "<br>");
+      document.write("Form sayısı : " + document.forms["test"].length + "<br>");
+
+      function yaz() {
+        var test = document.forms["test"];
+        for (var i = 0; i < test.length; i++) {
+          document.write(test.elements[i].value + "<br>");
+        }
+      }
+    </script>
+
+    <!-- html olayları -->
+    <p
+      onmouseover="this.innerHTML='Fenerbahçe Beko şampiyon olacak'"
+      onmouseout="this.innerHTML='Şampiyon Fenerbahçe Beko'"
+      onclick="this.innerHTML='Değişti paragraf  Fenerbahçe Beko'"
+    >
+      bulunan etikete uygula
+    </p>
+    <br />
+    <h1 id="id">Başlık</h1>
+    <br />
+    <button
+      type="button"
+      onclick="document.getElementById('id').style.color='blue'"
+    >
+      renk değiştir
+    </button>
+    <br />
+    <hr />
+    <input type="button" value="Tıkla" onclick="tik()" />
+
+    <button onclick="tarih()" onmouseover="tarih2()">Tarih ne ?</button>
+    <p id="tarih">Tarih:</p>
+    <br />
+    <p id="tarih2"></p>
+    <script>
+      function tik() {
+        alert("Tıklandı");
+      }
+
+      function tarih() {
+        document.getElementById("tarih").innerHTML = Date();
+      }
+      function tarih2() {
+        var an = new Date();
+        var yil = an.getFullYear();
+        var ay = an.getMonth() + 1;
+        var gun = an.getDate();
+
+        var tarih = gun + "/" + ay + "/" + yil;
+
+        document.getElementById("tarih").innerHTML = tarih;
+      }
+    </script>
+
+    <!-- onload fonksiyonu   -->
+    <h1 onload="acildi">Sayfa açıldı</h1>
+    <script>
+      function acildi() {
+        alert("Sayfa açıldı hoş geldiniz");
+      }
+    </script>
+  </body>
+</html>
